@@ -3,8 +3,10 @@ A secure application for encrypting files before they are uploaded to the cloud,
 
 ### Overview
 - A user’s private key is stored locally on their device. If they lose it, they will no longer be able to decrypt the files.
-- A user’s public key is stored in the **database** for anyone to access (firebase database).
+- A user’s public key is stored in the database for anyone to access (firebase database).
 - Symmetric AES keys for each user is encrypted with their public key and also stored in the **database** (firebase database).
 - All encrypted files are stored in the storage area (firebase storage)
 - All user account passwords are automatically hashed by firebase Auth using Scrypt which is considered a very secure hashing algorithm.
 - The account password is used to encrypt the locally stored private key so that the private key can only be used when the user is logged in.
+
+![image](https://user-images.githubusercontent.com/72154813/232350701-3a93beb3-dbff-4a45-a9d0-e755d3176f66.png)
